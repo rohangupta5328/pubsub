@@ -2,3 +2,4 @@ name: pubsub
 containerName: subscriber
 min: 1
 max: 5
+image: ${artifact.metadata.image}

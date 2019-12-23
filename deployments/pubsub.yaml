@@ -13,4 +13,4 @@ spec:
     spec:
       containers:
       - name: {{.Values.containerName}}
-        image: ${artifact.metadata}
+        image: {{.Values.image}}

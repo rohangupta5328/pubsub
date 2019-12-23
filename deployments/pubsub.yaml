@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: pubsub
+  name: {{.Values.name}}
 spec:
   selector:
     matchLabels:
-      app: pubsub
+      app: {{.Values.name}}
   template:
     metadata:
       labels:
-        app: pubsub
+        app: {{.Values.name}}
     spec:
       containers:
-      - name: subscriber
-        image: gcr.io/google-samples/pubsub-sample:v1
+      - name: {{.Values.containerName}}
+        image: ${artifact.metadata}

@@ -3,8 +3,8 @@ kind: HorizontalPodAutoscaler
 metadata:
   name: pubsub
 spec:
-  minReplicas: 1
-  maxReplicas: 5
+  minReplicas: {{.Values.min}}
+  maxReplicas: {{.Values.max}}
   metrics:
   - external:
       metricName: pubsub.googleapis.com|subscription|num_undelivered_messages
